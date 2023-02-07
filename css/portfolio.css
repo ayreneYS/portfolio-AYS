@@ -23,5 +23,12 @@
 }
 .portfolio .portfolio-item-inner .portfolio-img img {
 	width: 100%;
+	height: 210px;
 	display: block;
+}
+.portfolio .portfolio-item-inner .portfolio-img p {
+	font-size: 14px;
+}
+.portfolio .portfolio-item-inner .portfolio-img p span {
+	color: var(--skin-color);
 }

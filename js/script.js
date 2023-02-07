@@ -1,16 +1,22 @@
 /* ============================== typing animation ============================ */
-var typed = new Typed('.typing', {
+let typed = new Typed('.typing', {
 	strings: ['', 'Web Developer', 'Front-end Developer', 'Web Designer', 'Software Developer'],
 	typeSpeed: 100,
 	BackSpeed: 60,
 	loop: true,
 });
+
+const nav = document.querySelector('.nav');
+const navList = nav.querySelectorAll('li');
+const totalNavList = navList.length;
+const allSection = document.querySelectorAll('.section');
+const totalSection = allSection.length;
+const navTogglerBtn = document.querySelector('.nav-toggler');
+const aside = document.querySelector('.aside');
+const form = document.querySelector('.contact-form');
+const sendMessageBtn = document.querySelector('.sendMessageBtn');
+
 /* ============================== Aside ============================ */
-const nav = document.querySelector('.nav'),
-	navList = nav.querySelectorAll('li'),
-	totalNavList = navList.length,
-	allSection = document.querySelectorAll('.section'),
-	totalSection = allSection.length;
 for (let i = 0; i < totalNavList; i++) {
 	const a = navList[i].querySelector('a');
 	a.addEventListener('click', function () {
@@ -29,14 +35,17 @@ for (let i = 0; i < totalNavList; i++) {
 		}
 	});
 }
+
 function removeBackSection() {
 	for (let i = 0; i < totalSection; i++) {
 		allSection[i].classList.remove('back-section');
 	}
 }
+
 function addBackSection(num) {
 	allSection[num].classList.add('back-section');
 }
+
 function showSection(element) {
 	for (let i = 0; i < totalSection; i++) {
 		allSection[i].classList.remove('active');
@@ -44,6 +53,7 @@ function showSection(element) {
 	const target = element.getAttribute('href').split('#')[1];
 	document.querySelector('#' + target).classList.add('active');
 }
+
 function updateNav(element) {
 	for (let i = 0; i < totalNavList; i++) {
 		navList[i].querySelector('a').classList.remove('active');
@@ -53,6 +63,7 @@ function updateNav(element) {
 		}
 	}
 }
+
 document.querySelector('.hire-me').addEventListener('click', function () {
 	const sectionIndex = this.getAttribute('data-section-index');
 	//console.log(sectionIndex);
@@ -61,8 +72,7 @@ document.querySelector('.hire-me').addEventListener('click', function () {
 	removeBackSection();
 	addBackSection(sectionIndex);
 });
-const navTogglerBtn = document.querySelector('.nav-toggler'),
-	aside = document.querySelector('.aside');
+
 navTogglerBtn.addEventListener('click', () => {
 	asideSectionTogglerBtn();
 });
@@ -73,3 +83,19 @@ function asideSectionTogglerBtn() {
 		allSection[i].classList.toggle('open');
 	}
 }
+/* ============================== Send Message ============================ */
+
+// sendMessageBtn.addEventListener('click', function (e) {
+// 	e.preventDefault();
+// 	const email = document.getElementById('email'),
+// 		subject = document.getElementById('subject'),
+// 		message = document.getElementById('message');
+
+// 	Email.send({
+// 		SecureToken: '93af7f15-ea6d-4768-b861-52cb9f7dff2e',
+// 		To: 'ayreneyebes@gmail.com',
+// 		From: email.value,
+// 		Subject: subject.value,
+// 		Body: message.value,
+// 	}).then((message) => alert(message));
+// });
