@@ -466,25 +466,27 @@
 						<!-- ====== Contact Form ====== -->
 						<div class="row">
 							<form class="contact-form padd-15" action="https://formsubmit.co/aa985a5d7707a27b7f934ddb36c9ec5e" method="POST">
+								<!-- Honeypot -->
+								<input type="text" name="_honey" style="display: none" />
+								<!-- Disable Captcha -->
+								<input type="hidden" name="_captcha" value="false" />
+								<!-- Message success -->
+								<input type="hidden" name="_next" value="https://ayreneys.github.io/portfolio-AYS/success.html" />
+
 								<div class="row">
 									<div class="form-item col-6 padd-15">
 										<div class="form-group">
-											<input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off" />
+											<input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off" required />
 										</div>
 									</div>
 									<div class="form-item col-6 padd-15">
 										<div class="form-group">
-											<input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off" />
+											<input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off" required />
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-item col-12 padd-15">
-										<!-- Honeypot -->
-										<input type="text" name="_honey" style="display: none" />
-										<!-- Disable Captcha -->
-										<input type="hidden" name="_captcha" value="false" />
-
 										<div class="form-group">
 											<input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" autocomplete="off" />
 										</div>
@@ -493,7 +495,7 @@
 								<div class="row">
 									<div class="form-item col-12 padd-15">
 										<div class="form-group">
-											<textarea name="message" class="form-control" id="message" placeholder="Message" autocomplete="off"></textarea>
+											<textarea name="message" class="form-control" id="message" placeholder="Message" autocomplete="off" required></textarea>
 										</div>
 									</div>
 								</div>

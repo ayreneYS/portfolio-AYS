@@ -83,19 +83,3 @@ function asideSectionTogglerBtn() {
 		allSection[i].classList.toggle('open');
 	}
 }
-/* ============================== Send Message ============================ */
-
-// sendMessageBtn.addEventListener('click', function (e) {
-// 	e.preventDefault();
-// 	const email = document.getElementById('email'),
-// 		subject = document.getElementById('subject'),
-// 		message = document.getElementById('message');
-
-// 	Email.send({
-// 		SecureToken: '93af7f15-ea6d-4768-b861-52cb9f7dff2e',
-// 		To: 'ayreneyebes@gmail.com',
-// 		From: email.value,
-// 		Subject: subject.value,
-// 		Body: message.value,
-// 	}).then((message) => alert(message));
-// });
