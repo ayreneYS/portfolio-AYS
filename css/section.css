@@ -100,6 +100,7 @@ ul {
 }
 .btn:hover {
 	transform: scale(1.05);
+	box-shadow: 0 0.5em 0.5em -0.4em var(--sd-black-300);
 }
 .shadow-dark {
 	box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
