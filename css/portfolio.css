@@ -28,6 +28,7 @@
 }
 .portfolio .portfolio-item-inner .portfolio-img p {
 	font-size: 14px;
+	color: var(--text-black-900);
 }
 .portfolio .portfolio-item-inner .portfolio-img p span {
 	color: var(--skin-color);
