@@ -102,6 +102,17 @@
 	font-weight: 700;
 	color: var(--text-black-900);
 }
+.about .about-content h2 {
+	font-size: 35px;
+	font-weight: 200;
+	margin-bottom: 15px;
+}
+.about .about-content h3 span.name {
+	font-family: 'Pacifico';
+	font-size: 24px;
+	font-weight: 700;
+	color: #000;
+}
 .about .about-content .timeline-box {
 	flex: 0 0 100%;
 	max-width: 100%;
